@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace Server {
     class Database {
-
+        private const int PORT = 8600;
     }
 }
