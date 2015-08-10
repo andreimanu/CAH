@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Cards_Against_Humanity.Properties
+namespace Client.Properties
 {
 
 

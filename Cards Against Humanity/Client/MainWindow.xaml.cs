@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Cards_Against_Humanity
+namespace Client
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -22,7 +22,6 @@ namespace Cards_Against_Humanity
     {
         public MainWindow()
         {
-            Console.Write("Hello");
             InitializeComponent();
         }
     }
