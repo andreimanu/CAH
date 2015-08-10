@@ -8,5 +8,9 @@ namespace Server
 {
     class Connections
     {
+        void main()
+        {
+            
+        }
     }
 }
