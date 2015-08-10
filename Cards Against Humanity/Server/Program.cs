@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Server
 {
-    class Connections
+    class Program
     {
         static void Main(string[] args)
         {
