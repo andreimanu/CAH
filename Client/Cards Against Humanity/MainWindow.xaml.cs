@@ -22,6 +22,7 @@ namespace Cards_Against_Humanity
     {
         public MainWindow()
         {
+            Console.Write("Hello");
             InitializeComponent();
         }
     }
