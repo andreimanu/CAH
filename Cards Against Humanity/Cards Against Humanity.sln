@@ -3,31 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{8ECAA253-911E-4CBD-9FF8-18B1FD30F636}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{C6B1E1CF-032A-4CE3-9EAF-EBEFFA62125D}"
-EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "CAHClassDiagram", "CAHClassDiagram\CAHClassDiagram.modelproj", "{BB439020-00E3-4BE1-9782-BC7F63CCD2A1}"
-EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8ECAA253-911E-4CBD-9FF8-18B1FD30F636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8ECAA253-911E-4CBD-9FF8-18B1FD30F636}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8ECAA253-911E-4CBD-9FF8-18B1FD30F636}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8ECAA253-911E-4CBD-9FF8-18B1FD30F636}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C6B1E1CF-032A-4CE3-9EAF-EBEFFA62125D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6B1E1CF-032A-4CE3-9EAF-EBEFFA62125D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6B1E1CF-032A-4CE3-9EAF-EBEFFA62125D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6B1E1CF-032A-4CE3-9EAF-EBEFFA62125D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB439020-00E3-4BE1-9782-BC7F63CCD2A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB439020-00E3-4BE1-9782-BC7F63CCD2A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB439020-00E3-4BE1-9782-BC7F63CCD2A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB439020-00E3-4BE1-9782-BC7F63CCD2A1}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
