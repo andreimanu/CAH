@@ -73,7 +73,7 @@
     <packageHasNamedElement>
       <Interface
         Id="02f78f6f-30d9-4881-9da8-40927c3332f1"
-        name="AuthServer"
+        name="IAuthServer"
         isAbstract="false"
         isLeaf="false">
         <ownedAttributes>
@@ -163,8 +163,8 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="7e457b69-4653-4b67-ba52-f332fb4f7091"
-                      LastKnownName="clientUser"
+                      Id="c809b96d-4e85-483b-a603-d8321f1302b7"
+                      LastKnownName="ClientUser"
                       LastKnownLocation="Package_1749.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -182,34 +182,6 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="4540d68f-a463-498d-b918-96f15f97550a"
-                  name="User"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="7e457b69-4653-4b67-ba52-f332fb4f7091"
-                      LastKnownName="clientUser"
-                      LastKnownLocation="Package_1749.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="8d97266e-5ba7-45e2-950b-17fc9ec65305"
-                  name="Server"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="71a60a25-eddd-49a8-8ce6-2a27ba91214a"
-                      LastKnownName="gameServer"
-                      LastKnownLocation="Package_1749.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="9a2906f3-add2-41bd-86dc-cb52895826be"
                   direction="Return"
                   isUnique="false">
@@ -217,6 +189,34 @@
                     <undefinedTypeMoniker
                       Id="15e896aa-dfcd-424c-af4f-c9b4e06e8b7d"
                       LastKnownName="bool"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="53d7429e-e1a1-44b9-901e-b34626ff80fc"
+                  name="User"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c809b96d-4e85-483b-a603-d8321f1302b7"
+                      LastKnownName="ClientUser"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="001f5d92-614e-4e77-b575-4d436e867a27"
+                  name="Server"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="bcba392c-5edc-4b79-b81f-b8ee68d99c0f"
+                      LastKnownName="GameServer"
                       LastKnownLocation="Package_1749.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -240,8 +240,8 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="7e457b69-4653-4b67-ba52-f332fb4f7091"
-                      LastKnownName="clientUser"
+                      Id="c809b96d-4e85-483b-a603-d8321f1302b7"
+                      LastKnownName="ClientUser"
                       LastKnownLocation="Package_1749.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -305,9 +305,288 @@
     <packageHasNamedElement>
       <Interface
         Id="45ac1afe-b06a-4e5b-9782-2a466fc2d1ab"
-        name="GameServer"
+        name="IGameServer"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="322ac7a1-a858-481a-bb81-b55df701f5ac"
+            name="ActiveGames"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="e9d24528-1465-4773-9caa-9d957356ee04"
+                LastKnownName="List&lt;Game&gt;"
+                LastKnownLocation="Package_1749.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="17f7dbed-6c26-47df-bb39-0112472820fe"
+            name="LoggedUsers"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="5e8f4650-37c5-476a-9da5-818415c47177"
+                LastKnownName="Dictionary &lt;ClientUser, string&gt;"
+                LastKnownLocation="Package_1749.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="327b8023-54c9-4206-b7e1-0f41933354a4"
+            name="PlayingUsers"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fa2c33a5-d538-4e6c-bf4e-0d694e8cd83a"
+                LastKnownName="Dictionary&lt;ClientUser, Game&gt;"
+                LastKnownLocation="Package_1749.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="19f7e403-23c8-4223-b105-2b152407ebc3"
+            name="DBConnector"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="10f8dd76-8504-49f6-ba38-5361d2e393fa"
+                LastKnownName="DBManager"
+                LastKnownLocation="Package_1749.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="3fd716f5-44bc-4364-99f6-b5dd333720fa"
+            name="registerUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3db45763-257d-4a69-91b3-2b643922dea6"
+                  name="User"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c809b96d-4e85-483b-a603-d8321f1302b7"
+                      LastKnownName="ClientUser"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="936471b6-a40b-429a-b39a-02fe8e679277"
+                  name="AuthID"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="4ff98453-a61c-4e7a-9484-377c6e0b6c0b"
+                      LastKnownName="string"
+                      LastKnownLocation="Package_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2f1170f5-c921-4cae-af16-56c31832e60d"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="15e896aa-dfcd-424c-af4f-c9b4e06e8b7d"
+                      LastKnownName="bool"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="85cd9ef0-13b4-43a2-bda4-dc26c218bbc3"
+            name="assignGameRoom"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a78ec176-914d-4aa0-bded-cc9171ad3255"
+                  name="User"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c809b96d-4e85-483b-a603-d8321f1302b7"
+                      LastKnownName="ClientUser"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9dd75f58-a1ae-4747-8fad-8216a39a7a29"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="15e896aa-dfcd-424c-af4f-c9b4e06e8b7d"
+                      LastKnownName="bool"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ede05707-37d8-4d9b-8c0e-8e02ffdf2265"
+            name="findEmptyGames"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e8786ebf-082c-4335-bf2f-1b2d18f6e37c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e9d24528-1465-4773-9caa-9d957356ee04"
+                      LastKnownName="List&lt;Game&gt;"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b1604948-f999-41bd-9eaa-8783da5b6573"
+            name="fetchAuthKey"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bae782fb-a734-43c4-a0f9-fd982256a3c8"
+                  name="User"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c809b96d-4e85-483b-a603-d8321f1302b7"
+                      LastKnownName="ClientUser"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e80090f9-458e-4d37-81df-bc01b735b1a2"
+                  name="AuthKey"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="4ff98453-a61c-4e7a-9484-377c6e0b6c0b"
+                      LastKnownName="string"
+                      LastKnownLocation="Package_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="15079704-6295-4485-8a56-a9fd987352b2"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="15e896aa-dfcd-424c-af4f-c9b4e06e8b7d"
+                      LastKnownName="bool"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="97f34531-5001-4865-b773-352b97bc5ee1"
+            name="fetchGameCards"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7cbf06fb-73d4-4f6b-9c38-3fba4e6425e9"
+                  name="User"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c809b96d-4e85-483b-a603-d8321f1302b7"
+                      LastKnownName="ClientUser"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5ea03502-e2c2-4bf1-82f9-03c7360074a3"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="661fa8cd-e84c-4017-bb94-537f55115976"
+                      LastKnownName="List&lt;Card&gt;"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <undefinedType
@@ -328,6 +607,136 @@
       <undefinedType
         Id="15e896aa-dfcd-424c-af4f-c9b4e06e8b7d"
         name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="45a988db-6a12-43d0-8d58-36cf3d64a891"
+        name="AuthServer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="d22a1a48-fdf4-4030-b19e-86dcf8fb7dcd">
+            <interfaceMoniker
+              Id="02f78f6f-30d9-4881-9da8-40927c3332f1"
+              LastKnownName="IAuthServer"
+              LastKnownLocation="Package_1749.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="dc2cb08c-dbb3-4bc5-8afd-1c6d6011cdfb"
+        name="List&lt;Room&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="e9d24528-1465-4773-9caa-9d957356ee04"
+        name="List&lt;Game&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="2139d468-1d87-4bbb-9277-f382fb0e8c63"
+        name="Dictionary &lt;clientUser, string&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c809b96d-4e85-483b-a603-d8321f1302b7"
+        name="ClientUser" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="5e8f4650-37c5-476a-9da5-818415c47177"
+        name="Dictionary &lt;ClientUser, string&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="bcba392c-5edc-4b79-b81f-b8ee68d99c0f"
+        name="GameServer" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="64088933-6ac9-4ebd-857b-270e627ffa04"
+        name="GameServer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="8331ae83-e4ed-43ce-8c0d-0c89d2cae187">
+            <interfaceMoniker
+              Id="45ac1afe-b06a-4e5b-9782-2a466fc2d1ab"
+              LastKnownName="IGameServer"
+              LastKnownLocation="Package_1749.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="276ca6ba-f26c-425d-b364-b5555c109375"
+            name="Users"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="4e1c4a2d-5392-456d-a340-0d178681d96f"
+                LastKnownName="List&lt;ClientUser&gt;"
+                LastKnownLocation="Package_1721.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="76c6b4cf-164e-4193-b538-c3671be82081"
+            name="fetchUsers"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0fab68d3-37f7-4f0e-b03e-187a3a19ecfd"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="15e896aa-dfcd-424c-af4f-c9b4e06e8b7d"
+                      LastKnownName="bool"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="fa2c33a5-d538-4e6c-bf4e-0d694e8cd83a"
+        name="Dictionary&lt;ClientUser, Game&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="661fa8cd-e84c-4017-bb94-537f55115976"
+        name="List&lt;Card&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5cfe54f9-61aa-40f2-ab2e-ce7d23723cd9"
+        LastKnownName="Database"
+        LastKnownLocation="Package_1721.uml" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

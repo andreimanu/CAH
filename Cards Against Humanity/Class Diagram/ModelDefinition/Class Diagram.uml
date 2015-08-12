@@ -42,12 +42,6 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <packageMoniker
-        Id="5cfe54f9-61aa-40f2-ab2e-ce7d23723cd9"
-        LastKnownName="Database"
-        LastKnownLocation="Package_1721.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
         Id="44cd197f-21c0-4789-a403-5d42f68a46da"
         LastKnownName="Client"
         LastKnownLocation="Package1_1721.uml" />

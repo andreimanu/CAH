@@ -387,10 +387,19 @@
     <packageHasNamedElement>
       <class
         Id="c4c0a94a-43ab-458d-83e1-2e2dda53d32a"
-        name="Logic"
+        name="Game"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="5acfc04b-3d5e-40de-8ec5-619c49975e8a">
+            <interfaceMoniker
+              Id="45ac1afe-b06a-4e5b-9782-2a466fc2d1ab"
+              LastKnownName="IGameServer"
+              LastKnownLocation="Package_1749.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="7bf0feb9-e9c1-4a7b-bb9c-c8ef6941f8d9"
@@ -586,6 +595,210 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="909463c5-cce1-4e44-bcd4-06b80e1c6284"
+            name="registerUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2ab89798-cae8-46d4-8175-aa1bcafe801a"
+                  name="User"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c809b96d-4e85-483b-a603-d8321f1302b7"
+                      LastKnownName="ClientUser"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b1e67990-9ba8-4d3a-9d1f-6084cb7f2639"
+                  name="AuthID"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="4ff98453-a61c-4e7a-9484-377c6e0b6c0b"
+                      LastKnownName="string"
+                      LastKnownLocation="Package_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2bab9d5d-7f6c-4978-80ee-de7c8d83d02b"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="15e896aa-dfcd-424c-af4f-c9b4e06e8b7d"
+                      LastKnownName="bool"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7ecac3b4-e1b8-4bf1-8e1b-8b53c2364242"
+            name="assignGameRoom"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ac0eb978-ce88-4bff-b82d-c0c58f85c09e"
+                  name="User"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c809b96d-4e85-483b-a603-d8321f1302b7"
+                      LastKnownName="ClientUser"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5b8550ae-228b-44ca-8104-03b9e2d8f02e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="15e896aa-dfcd-424c-af4f-c9b4e06e8b7d"
+                      LastKnownName="bool"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="862f9aa8-185c-426b-854c-d1022f4d1c30"
+            name="findEmptyGames"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="979f5837-5028-4b3e-a83f-a71dfdc19d87"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e9d24528-1465-4773-9caa-9d957356ee04"
+                      LastKnownName="List&lt;Game&gt;"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="db58cc01-b292-4b6d-b388-6a353cb7eda0"
+            name="fetchAuthKey"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c34318f1-3b31-43c1-a3c0-b4c67f37f92a"
+                  name="User"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c809b96d-4e85-483b-a603-d8321f1302b7"
+                      LastKnownName="ClientUser"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="85d89be3-6305-4efb-a71a-8bd8887522c7"
+                  name="AuthKey"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="4ff98453-a61c-4e7a-9484-377c6e0b6c0b"
+                      LastKnownName="string"
+                      LastKnownLocation="Package_1722.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aef72ca4-b3d4-4446-8592-b806300374b2"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="15e896aa-dfcd-424c-af4f-c9b4e06e8b7d"
+                      LastKnownName="bool"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="613793f2-c489-4aa8-93dd-a87becb3eac0"
+            name="fetchGameCards"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9065e43c-05d8-49a7-8215-b16aac92fd03"
+                  name="User"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c809b96d-4e85-483b-a603-d8321f1302b7"
+                      LastKnownName="ClientUser"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="30b7f883-bfcf-4f6e-afdd-9d2490033273"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="661fa8cd-e84c-4017-bb94-537f55115976"
+                      LastKnownName="List&lt;Card&gt;"
+                      LastKnownLocation="Package_1749.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
