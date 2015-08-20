@@ -45,7 +45,7 @@
     <Compile Include="GeneratedCode\Model\Achievement.cs" />
     <Compile Include="GeneratedCode\Model\Card.cs" />
     <Compile Include="GeneratedCode\Model\Game.cs" />
-    <Compile Include="GeneratedCode\Model\Premium User.cs" />
+    <Compile Include="GeneratedCode\Model\PremiumUser.cs" />
     <Compile Include="GeneratedCode\Model\Room.cs" />
     <Compile Include="GeneratedCode\Model\User.cs" />
     <Compile Include="GeneratedCode\Server\AuthServer.cs" />

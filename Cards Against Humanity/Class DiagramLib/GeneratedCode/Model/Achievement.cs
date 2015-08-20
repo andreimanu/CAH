@@ -10,10 +10,11 @@ namespace Model
 	using System.Collections.Generic;
 	using System.Linq;
 	using System.Text;
+    using Model;
 
 	public class Achievement
 	{
-		public virtual Premium User Premium User
+		public PremiumUser User
 		{
 			get;
 			set;

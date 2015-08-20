@@ -37,7 +37,7 @@ namespace Model
 			set;
 		}
 
-		public User(string UserID, string Username, string Password)
+		public User(int UserID, string Username, string Password)
 		{
 		}
 

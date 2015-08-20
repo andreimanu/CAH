@@ -6,13 +6,14 @@
 //------------------------------------------------------------------------------
 namespace Client
 {
-	using Server;
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using Model;
+    using Server;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
-	public class ClientUser
+    public class ClientUser
 	{
 		private List<Card> Cards
 		{

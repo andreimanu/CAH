@@ -6,14 +6,15 @@
 //------------------------------------------------------------------------------
 namespace Server.Database
 {
-	using Model;
-	using Server;
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using Client;
+    using Model;
+    using Server;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
-	public interface DBManager  : IAuthServer, IGameServer
+    public interface DBManager
 	{
 		string DBName { get;set; }
 

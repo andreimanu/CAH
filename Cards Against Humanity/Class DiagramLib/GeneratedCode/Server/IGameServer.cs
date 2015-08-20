@@ -6,13 +6,15 @@
 //------------------------------------------------------------------------------
 namespace Server
 {
-	using Model;
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using Client;
+    using Model;
+    using Database;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
-	public interface IGameServer 
+    public interface IGameServer 
 	{
 		List<Game> ActiveGames { get;set; }
 

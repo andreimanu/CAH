@@ -11,13 +11,19 @@ namespace Model
 	using System.Linq;
 	using System.Text;
 
-	public class Premium User : User
-	{
-		private List <Achievement> Achievement
-		{
-			get;
-			set;
-		}
+	public class PremiumUser : User
+    {
+        private List<Achievement> Achieves
+        {
+            get;
+            set;
+        }
+
+        public PremiumUser(int UserID, string Username, string Password) : base(UserID, Username, Password)
+        {
+            Achieves = new List<Achievement>();
+        }
+
 
 		public virtual List<Achievement> getAchievements()
 		{

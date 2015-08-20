@@ -6,13 +6,14 @@
 //------------------------------------------------------------------------------
 namespace Server
 {
-	using Server.Database;
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using Client;
+    using Server.Database;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
-	public class GameServer
+    public class GameServer
 	{
 		private List<ClientUser> Users
 		{

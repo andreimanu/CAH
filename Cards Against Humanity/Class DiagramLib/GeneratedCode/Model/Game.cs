@@ -6,13 +6,14 @@
 //------------------------------------------------------------------------------
 namespace Model
 {
-	using Server;
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+    using Client;
+    using Server;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
 
-	public class Game : IGameServer
+    public class Game
 	{
 		private object RoomID
 		{
@@ -32,9 +33,9 @@ namespace Model
 			set;
 		}
 
-		private object Cards : Dictionary <User, List<Card>>
+		private Dictionary <User, List<Card>> Cards
 		{
-			get;
+            get;
 			set;
 		}
 
