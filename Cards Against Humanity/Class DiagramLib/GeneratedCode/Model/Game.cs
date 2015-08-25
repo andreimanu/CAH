@@ -15,6 +15,9 @@ namespace Model
 
     public class Game
 	{
+
+        private List<Card> gameCards;
+
 		private object RoomID
 		{
 			get;
@@ -82,6 +85,24 @@ namespace Model
 			throw new System.NotImplementedException();
 		}
 
+        public void assignCards(User user) {
+            Cards[user] = loadRandomCards();
+        }
+
+        public List<Card> loadRandomCards() {
+            Random n = new Random();
+            List<Card> temp = new List<Card>();
+            for (int i = 0; i < 5; i++) {
+                var abc = gameCards.Select(x => x.CardID == n.Next(0, gameCards.Count - 1));
+                var a = abc;
+            }
+                temp.Add(gameCards.Select<Card>( x =>  x.CardID = n.Next(0, gameCards.Count - 1) ).ToList()[0];
+            return temp;
+        }
+
+        public void loadCards() {
+            this.gameCards = new List<Card>();
+        }
 	}
 }
 

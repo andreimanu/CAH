@@ -13,18 +13,32 @@ namespace Model
 
 	public class Card
 	{
-		private int CardID
+        enum Type {
+            Black = 0,
+            White = 1
+        }
+
+        internal int CardType {
+            get;
+            set;
+        }
+
+        internal int CardID
 		{
 			get;
 			set;
 		}
 
-		private string CardText
+        internal string CardText
 		{
 			get;
 			set;
 		}
 
+        public Card(int cardID, string cardText, int cardType) {
+            this.CardID = cardID;
+            this.CardText = cardText;
+            this.CardType = cardType;
+        }
 	}
 }
-

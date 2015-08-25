@@ -39,8 +39,8 @@ namespace Model
 
 		public User(int UserID, string Username, string Password)
 		{
-		}
 
+		}
 	}
 }
 
